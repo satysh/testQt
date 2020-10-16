@@ -39,6 +39,8 @@ else()
     QtWidgets.h
     Counter.h
     Counter.cxx
+    Test.h
+    Test.cxx
   )
 endif()
 

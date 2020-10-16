@@ -1,5 +1,6 @@
 #include <QtWidgets>
 #include "Counter.h"
+#include "Test.h"
 
 int main(int argc, char **argv)
 {
@@ -8,13 +9,17 @@ int main(int argc, char **argv)
     QLabel lbl("0");
     QPushButton cmd("ADD");
     Counter counter;
-
+    Test test;
+    
     lbl.show();
     cmd.show();
 
     QObject::connect(&cmd, SIGNAL(clicked()),
                      &counter, SLOT(slotInc())
                      );
+    QObject::connect(&cmd, SIGNAL(clicked()),
+    	             &test, SLOT(slotPrint())
+    	             );
     QObject::connect(&counter, SIGNAL(counterChanged(int)),
                      &lbl, SLOT(setNum(int))
                      );

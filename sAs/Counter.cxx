@@ -9,10 +9,10 @@ Counter::Counter() : QObject()
 void Counter::slotInc()
 {
     emit counterChanged(++m_nValue);
-
     if (m_nValue > 5) {
         qDebug() << "Goodbye Suka!";
         emit goodbye();
     }
 }
+
 
