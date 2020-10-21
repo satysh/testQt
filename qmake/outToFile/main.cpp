@@ -43,6 +43,7 @@ void dummyOutput(QtMsgType, const QMessageLogContext&, const QString&)
 }
 #ifndef QT_DEBUG
 #define QT_DEBUG
+#endif
 
 int main(int argc, char** argv)
 {
